@@ -2,6 +2,8 @@
 
 # #### Create a Reptile class to inherit Animal class
 
+# To inherit from another class you must import:
+# From animal (the file name) import Animal (the class you want to inherit from)
 
 from animal import Animal  # From file to class. Must be in the same directory
 class Reptile(Animal):    #Inheriting from Animal class
@@ -25,9 +27,12 @@ class Reptile(Animal):    #Inheriting from Animal class
 smart_reptile = Reptile()
 
 # print(smart_reptile.breathe()) #breathe method is inherited from Animal class
-print(smart_reptile.hunt()) # hunt() is available in Reptile class
+#print(smart_reptile.hunt()) # hunt() is available in Reptile class
 # print(smart_reptile.eat())
 # print(smart_reptile.move())
-print(smart_reptile.hunt())
+#print(smart_reptile.hunt())
+
+# print(smart_reptile.cold_blooded) # Testing a method from Reptile class
+# print(smart_reptile.alive) # Checking a method from Animal class
 
 # - Go to step 3, Snake

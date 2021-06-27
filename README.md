@@ -169,7 +169,7 @@ print(type(requests_api.headers))
 print(type(requests_api.content))
  ```
 
-### Object orientated programming, OOP
+## Object orientated programming, OOP
 
 #### Four pillars of OOP
 - Abstraction : Used to hide irrelevant internal functionality of the function from the user, to reduce complexity.
@@ -219,9 +219,9 @@ print(cat.eat())
 ### Example for better understanding of classes and object.
 - An object basically copies the whole class to itself.
 - You can then customise members (attributes and methods) in the new object, and they will be uneffected in the original class.
-`
+```
 object = Animal() # Creating a new object
-`
+```
   
 - Printing the method alive from the Animal class and the new object
 ```
@@ -240,7 +240,8 @@ print(Animal().alive)
 ### Reptile class
 
 #### Create a Reptile class to inherit Animal class
-
+- To inherit from another class you must import: 
+- From animal (the file name) import Animal (the class you want to inherit from)
 ```
 from animal import Animal  # From file to class. Must be in the same directory
 class Reptile(Animal):    #Inheriting from Animal class
@@ -269,6 +270,9 @@ print(smart_reptile.hunt()) # hunt() is available in Reptile class
 print(smart_reptile.eat())
 print(smart_reptile.move())
 print(smart_reptile.hunt())
+
+print(smart_reptile.cold_blooded) # Testing a method from Reptile class
+print(smart_reptile.alive) # Checking a method from Animal class
 ```
 
 ### Snake class
@@ -292,6 +296,22 @@ smart_snake = Snake()
 print(smart_snake.move()) # move() is available from Animal class
 print(smart_snake.hunt())# hunt () is available from Reptile class
 ```
+- Checking members from Snake class
+```
+print(smart_snake.forked_tongue) # Should output True
+print(smart_snake.use_tongue_to_smell()) # Should output *hiss*
+```
+- Checking members from Reptile class
+```
+print(smart_snake.tetrapods) # Should output *hiss*
+print(smart_snake.hunt()) # Should output Keep hunting for food
+```
+- Checking members from Animal class
+```
+print(smart_snake.eyes) # Should output True
+print(smart_snake.breathe()) # Should output Keep breathing, stay alive
+```
+
 ### Python class
 
 #### Create a Python class
