@@ -216,6 +216,26 @@ class Animal:       #We declare attributes in out init method
 cat = Animal()
 print(cat.eat())
 ```
+### Example for better understanding of classes and object.
+- An object basically copies the whole class to itself.
+- You can then customise members (attributes and methods) in the new object, and they will be uneffected in the original class.
+`
+object = Animal() # Creating a new object
+`
+  
+- Printing the method alive from the Animal class and the new object
+```
+print(object.alive)
+print(Animal().alive)
+
+object.alive = False # Changing the alive method in the new object
+```
+- Re-printing the same method. Notice in Animal it is unchanged 
+```
+print(object.alive)
+print(Animal().alive)
+```
+
 
 ### Reptile class
 
